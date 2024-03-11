@@ -4,6 +4,7 @@ import Basket from "./components/Basket";
 import Details from "./components/Details";
 import React, {useState}from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Test from "./Test";
 
 const App = () => {
   const[details,setDetails]=useState([])
@@ -11,6 +12,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Header />
+        <Test/>
         <Routes>
           <Route element={<Main setDetails={setDetails}/>} path="/" />
           <Route element={<Basket />} path="/basket" />
